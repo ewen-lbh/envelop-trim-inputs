@@ -2,6 +2,15 @@
   "name": "envelop-trim-inputs",
   "version": "0.0.1",
   "description": "Envelop plugin to trim all string inputs from the GraphQL request's variables",
+  "keywords": [
+    "gql",
+    "graphql",
+    "envelop",
+    "plugin",
+    "trim",
+    "inputs",
+    "typescript"
+  ],
   "type": "module",
   "module": "src/index.ts",
   "main": "dist/index.js",
