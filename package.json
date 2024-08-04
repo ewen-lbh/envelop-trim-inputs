@@ -1,0 +1,30 @@
+{
+  "name": "envelop-trim-inputs",
+  "type": "module",
+  "module": "src/index.ts",
+    "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "bun build --target=node ./src/index.ts --outfile=dist/index.js && bun run build:declaration",
+    "build:declaration": "tsc --emitDeclarationOnly --project tsconfig.types.json",
+    "postbuild": "rimraf tsconfig.types.tsbuildinfo"
+  },
+  "files": [
+    "dist/*.js",
+    "dist/*.d.ts"
+  ],
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/is-plain-object": "^2.0.4",
+    "bun-types": "^1.1.21",
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@envelop/core": "^5.0.1",
+    "is-plain-object": "^5.0.0"
+  }
+}
